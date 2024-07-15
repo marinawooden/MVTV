@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "video": "./vids/1",
+    "title": "3 second video",
+    "duration": 3,
+    "offset": 0
+  },
+  {
+    "id": 2,
+    "video": "./vids/2",
+    "title": "Green background for 3 second",
+    "duration": 3,
+    "offset": 0
+  }
+]
