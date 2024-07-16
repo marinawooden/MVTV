@@ -1,9 +1,6 @@
-file ../vids/gvy2yqUHLLg-resized.mp4
-file ../vids/6BODDyZRF6A-resized.mp4
-file ../vids/cl3B_FTDKD0-resized.mp4
-file ../vids/jQyazt4RDTM-resized.mp4
-file ../vids/r9foZ7KVSng-resized.mp4
-file ../vids/wTkfK2g4pKI-resized.mp4
-file ../vids/3dOx510kyOs-resized.mp4
-file ../vids/p3j2NYZ8FKs-resized.mp4
-file ../vids/VAtGOESO7W8-resized.mp4
+file ../vids/J3OF0xVLLNQ-resized.mp4
+file ../vids/gDoRcg42lQI-resized.mp4
+file ../vids/J2jRuh1bAxw-resized.mp4
+file ../vids/4yibaObVKgI-resized.mp4
+file ../vids/zZXm9HcDsxI-resized.mp4
+file ../vids/-5zeJyQ31rM-resized.mp4

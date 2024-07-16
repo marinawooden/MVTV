@@ -4,15 +4,18 @@ import yt_dlp
 import re
 
 def main():
+  parse_files('./data/urls.json', './data/clips.json')
+  parse_files('./data/urls-ads.json', './data/clips-ads.json')
+  
+
+def parse_files(input, output):
+  meta = []
   ydl_opts = {
     'quiet': True,
     'skip_download': True,  # We don't want to download the video
   }
 
-  urls = []
-  meta = []
-
-  with open('./data/urls.json') as opts:
+  with open(input) as opts:
     urls = json.load(opts)
     
   for i in range(len(urls)):
@@ -32,7 +35,7 @@ def main():
 
     meta.append(new_obj)
 
-  with open('./data/clips.json', 'w') as f:
+  with open(output, 'w') as f:
     json.dump(meta, f)
 
   

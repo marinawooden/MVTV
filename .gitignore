@@ -1,5 +1,6 @@
 # extra, program-specific
 *.mp4
+*.env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
