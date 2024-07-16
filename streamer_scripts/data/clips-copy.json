@@ -12,5 +12,12 @@
     "title": "Green background for 3 second",
     "duration": 3,
     "offset": 0
+  },
+  {
+    "id": 3,
+    "video": "./vids/5",
+    "title": "11 SECOND STREAM",
+    "duration": 11,
+    "offset": 0
   }
 ]
