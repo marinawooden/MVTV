@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Kabel';
+    src: url('Kabel-Black.woff2') format('woff2'),
+        url('Kabel-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

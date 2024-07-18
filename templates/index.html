@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Video Stream</title>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='fonts/stylesheet.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik+Scribble&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='scripts/index.js')}}"></script>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <main>
+      <div id="player-holder">
+        <video id="video-player">
+          <source id="video-source" src="/video_feed" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div id="video-info">
+          <div id="logo-uptop">
+            <img src="../static/img/mv-body.svg">
+            <img class="active-logo-bar" src="../static/img/mv-anim.svg">
+          </div>
+          <div class="meta"></div>
+        </div>
+      </div>
+    </main>
+</body>
+</html>
