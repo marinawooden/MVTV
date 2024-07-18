@@ -3,8 +3,9 @@
 (function() {
   const INFO_TIMEOUT = 5000;
 
-  let isPlaying = false;
+  let isPlaying = true;
   let timerId;
+  let hasInteracted; // has interacted with the page yet?
 
   window.addEventListener("load", init);
 
@@ -12,9 +13,17 @@
     const videoPlayer = document.getElementById('video-player');
     const videoInfo = document.getElementById('video-info');
     const videoHolder = document.getElementById('player-holder');
+    const enterButton = document.getElementById('logo-main');
 
     const socket = io();
     socket.on('video_info', startVideo);
+
+    enterButton.addEventListener('click', (e) => {
+      document.getElementById("landing-drop").classList.add('hidden');
+      videoPlayer.play();
+      hasInteracted = true;
+      e.stopPropagation();
+    });
 
     videoPlayer.addEventListener('ended', () => {
       videoInfo.querySelector(".meta").innerHTML = "";
@@ -41,7 +50,9 @@
     });
 
     videoInfo.addEventListener('click', () => {
+      console.log(isPlaying);
       isPlaying ? videoPlayer.pause() : videoPlayer.play();
+      videoInfo.classList.toggle("paused");
       isPlaying = !isPlaying;
     });
   }
@@ -53,7 +64,8 @@
     populateVideoPlayer(data);
     videoSource.src = `/video_feed?start=0`;
     videoPlayer.load();
-    videoPlayer.play();
+
+    hasInteracted && videoPlayer.play();
   }
 
   function populateVideoPlayer(data) {

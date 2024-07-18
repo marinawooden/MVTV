@@ -14,6 +14,23 @@
     <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
+  <div id="landing-drop">
+    <!-- TODO: Change aria role -->
+    <div id="logo-main">
+      <img src="../static/img/mv-body.svg" />
+      <img class="slash" src="../static/img/mv-anim.svg" />
+    </div>
+    <div id="noise-holder">
+    </div>
+    <svg>
+      <filter id="noise">
+        <feTurbulence id="turbulence">
+          <animate attributeName="baseFrequency" dur="0.5s" values="0.9 0.9; 0.8 0.8; 0.9 0.9;" repeatCount="indefinite"></animate>
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" scale="60"></feDisplacementMap>
+      </filter>
+    </svg>
+  </div>
     <main>
       <div id="player-holder">
         <video id="video-player">

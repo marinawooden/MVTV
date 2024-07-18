@@ -8,6 +8,16 @@ socketio = SocketIO(app)
 
 video_dict = [
     {
+        "path": "streamer_scripts/vids/jQyazt4RDTM-resized.mp4",
+        "info": {
+            "title": "Head Over Heels",
+            "year": 1984,
+            "label": "Columbia Records",
+            "artist": "The Go-Gos",
+            "youtube_url": "https://www.youtube.com/watch?v=jQyazt4RDTM"
+        }
+    },
+    {
         "path": "streamer_scripts/vids/jMsOH16tkaY-resized.mp4",
         "info": {
           "title": "Billy Joel Live",
