@@ -54,5 +54,152 @@
     "title": "Together Forever",
     "year": 1987,
     "label": "RCA Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=rpmoVSmMJ2U",
+    "artist": "The Rave-Ups",
+    "title": "Positively Lost Me",
+    "year": 1985,
+    "label": "Demon Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=SECVGN4Bsgg",
+    "artist": "Men At Work",
+    "title": "Who Can It Be Now?",
+    "year": 1981,
+    "label": "Columbia Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=XfR9iY5y94s",
+    "artist": "Men At Work",
+    "title": "Down Under",
+    "year": 1981,
+    "label": "Columbia Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=wTP2RUD_cL0",
+    "artist": "Dire Straits",
+    "title": "Money for Nothing",
+    "year": 1985,
+    "label": "Warner Bros Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=h0ffIJ7ZO4U",
+    "artist": "Dire Straits",
+    "title": "Sultans of Swing",
+    "year": 1985,
+    "label": "Warner Bros Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=_3eC35LoF4U",
+    "artist": "Talking Heads",
+    "title": "Burning Down the House",
+    "year": 1983,
+    "label": "Sire Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=3dOx510kyOs",
+    "artist": "The Cars",
+    "title": "You Might Think",
+    "year": 1984,
+    "label": "Elektra"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=K3SA5Z-cbC8",
+    "artist": "The Cars",
+    "title": "Shake it Up",
+    "year": 1981,
+    "label": "Elektra"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=BoXu6QmxpJE",
+    "artist": "Wang Chung",
+    "title": "Everybody Have Fun Tonight",
+    "year": 1986,
+    "label": "Geffen"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=JmGMzyajA2U",
+    "artist": "The Romantics",
+    "title": "Talking in Your Sleep",
+    "year": 1983,
+    "label": "Nemperor Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=Rqnw5IfbZOU",
+    "artist": "The Romantics",
+    "title": "What I Like About You",
+    "year": 1980,
+    "label": "Nemperor Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=-qgpewMCVjs",
+    "artist": "Cheap Trick",
+    "title": "I Want You to Want Me",
+    "year": 1977,
+    "label": "Epic"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=dsgBpsNPQ50",
+    "artist": "Loverboy",
+    "title": "Working for the Weekend",
+    "year": 1981,
+    "label": "Columbia Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=eFTLKWw542g",
+    "artist": "Billy Joel",
+    "title": "We Didn't Start the Fire",
+    "year": 1989,
+    "label": "Columbia Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=6RUIeX6UCT8",
+    "artist": "Don Henley",
+    "title": "Boys of Summer",
+    "year": 1984,
+    "label": "Geffen"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=iIpfWORQWhU",
+    "artist": "A Flock of Seagulls",
+    "title": "I Ran (So Far Away)",
+    "year": 1982,
+    "label": "Jive"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=Im3JzxlatUs",
+    "artist": "Gary Newman",
+    "title": "Cars",
+    "year": 1979,
+    "label": "Beggars Banquet"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=657TZDHZqj4",
+    "artist": "Big Country",
+    "title": "In A Big Country",
+    "year": 1983,
+    "label": "Mercury"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=ijAYN9zVnwg",
+    "artist": "Information Society",
+    "title": "What's on Your Mind (Pure Energy)",
+    "year": 1988,
+    "label": "Tommy Boy Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=TxrwImCJCqk",
+    "artist": "The Bangles",
+    "title": "Hazy Shade of Winter",
+    "year": 1987,
+    "label": "Def Jam Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=SsmVgoXDq2w",
+    "artist": "The Bangles",
+    "title": "Manic Monday",
+    "year": 1985,
+    "label": "Columbia Records"
   }
 ]

@@ -47,12 +47,13 @@ class Streamer():
         # add to history
         # self.history.append(curr_vid)
         # set new start time
-        self.last_start = time.time()
 
         print(f"SETTING TIMER TO QUEUE VIDEO IN {curr_vid['duration']}")
         # set timer for when current video starts
-        timer = threading.Timer(curr_vid['duration'] - 1, self.play)
+        timer = threading.Timer(curr_vid['duration'], self.play)
         timer.start()
+
+        self.last_start = time.time()
 
         # queue another video
         self.queue_video(save=False)
