@@ -1,29 +1,58 @@
 [
-  "https://www.youtube.com/watch?v=cl3B_FTDKD0",
-  "https://www.youtube.com/watch?v=r9foZ7KVSng",
-  "https://www.youtube.com/watch?v=xxDv_RTdLQo",
-  "https://www.youtube.com/watch?v=mfI1S0PKJR8",
-  "https://www.youtube.com/watch?v=9GMjH1nR0ds",
-  "https://www.youtube.com/watch?v=bDMCwSP5nf0",
-  "https://www.youtube.com/watch?v=dRHetRTOD1Q",
-  "https://www.youtube.com/watch?v=Wn9E5i7l-Eg",
-  "https://www.youtube.com/watch?v=p3j2NYZ8FKs",
-  "https://www.youtube.com/watch?v=wTkfK2g4pKI",
-  "https://www.youtube.com/watch?v=CsHiG-43Fzg",
-  "https://www.youtube.com/watch?v=aGCdLKXNF3w",
-  "https://www.youtube.com/watch?v=u1ZvPSpLxCg",
-  "https://www.youtube.com/watch?v=VAtGOESO7W8",
-  "https://www.youtube.com/watch?v=Nxazmzy0vAo",
-  "https://www.youtube.com/watch?v=5T2aZrOgDak",
-  "https://www.youtube.com/watch?v=teZsA_ci-7E",
-  "https://www.youtube.com/watch?v=Tka4DQGx7zc",
-  "https://www.youtube.com/watch?v=jMsOH16tkaY",
-  "https://www.youtube.com/watch?v=6RUIeX6UCT8",
-  "https://www.youtube.com/watch?v=xuZA6qiJVfU",
-  "https://www.youtube.com/watch?v=gvy2yqUHLLg",
-  "https://www.youtube.com/watch?v=3dOx510kyOs",
-  "https://www.youtube.com/watch?v=K3SA5Z-cbC8",
-  "https://www.youtube.com/watch?v=6BODDyZRF6A",
-  "https://www.youtube.com/watch?v=DqoLMGSBGYc",
-  "https://www.youtube.com/watch?v=jQyazt4RDTM"
+  {
+    "link": "https://www.youtube.com/watch?v=1O0yazhqaxs",
+    "artist": "3 second video",
+    "title": "3 second video",
+    "year": 2024,
+    "label": "Youtube"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=jQyazt4RDTM",
+    "artist": "The Go-Go's",
+    "title": "Head Over Heels",
+    "year": 1984,
+    "label": "I.R.S Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=cl3B_FTDKD0",
+    "artist": "Talking Heads",
+    "title": "And She Was",
+    "year": 1985,
+    "label": "Sire Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=Gf_RHVjPrHY",
+    "artist": "Sinead O'Connor",
+    "title": "Mandinka",
+    "year": 1987,
+    "label": "Ensign Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=jMsOH16tkaY",
+    "artist": "Billy Joel",
+    "title": "Movin' Out (Anthony's Song) - Live from Long Island",
+    "year": 1982,
+    "label": "Columbia Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=lrpXArn3hII",
+    "artist": "Bruce Springsteen",
+    "title": "I'm On Fire",
+    "year": 1984,
+    "label": "Columbia Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=lrpXArn3hII",
+    "artist": "Bruce Springsteen",
+    "title": "I'm On Fire",
+    "year": 1984,
+    "label": "Columbia Records"
+  },
+  {
+    "link": "https://www.youtube.com/watch?v=yPYZpwSpKmA",
+    "artist": "Rick Astley",
+    "title": "Together Forever",
+    "year": 1987,
+    "label": "RCA Records"
+  }
 ]

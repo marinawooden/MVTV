@@ -19,16 +19,22 @@ def parse_files(input, output):
     urls = json.load(opts)
     
   for i in range(len(urls)):
+    info = urls[i]
+
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-      video_meta = ydl.extract_info(urls[i], download=False)
+      video_meta = ydl.extract_info(info["link"], download=False)
 
     pattern = r"(?<=v=).*"
-    vid_id = re.search(pattern, urls[i]).group(0) 
+    vid_id = re.search(pattern, info["link"]).group(0) 
     
     new_obj = {
       "id": vid_id,
-      "video": urls[i],
-      "title": video_meta['title'],
+      "video": info["link"],
+      "title": info["title"],
+      "artist": info["artist"],
+      "label": info["label"],
+      "year": info["year"],
+      "video_title": video_meta['title'],
       "duration": video_meta['duration'],
       "tags": video_meta['tags'],
     }

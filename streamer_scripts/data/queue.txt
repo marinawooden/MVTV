@@ -1,6 +1,1 @@
-file ../vids/J3OF0xVLLNQ-resized.mp4
-file ../vids/gDoRcg42lQI-resized.mp4
-file ../vids/J2jRuh1bAxw-resized.mp4
-file ../vids/4yibaObVKgI-resized.mp4
-file ../vids/zZXm9HcDsxI-resized.mp4
-file ../vids/-5zeJyQ31rM-resized.mp4
+file ../vids/jQyazt4RDTM-resized.mp4

@@ -1,3 +1,7 @@
+html {
+  image-rendering: pixelated;
+}
+
 body {
   background-color: hotpink;
   margin: 0;
@@ -123,11 +127,36 @@ main {
   justify-content: center;
 }
 
+#landing-drop.checker {
+  background-size: 50px 50px; /* Size of each checker square */
+  background-color: white;
+  background-image: 
+      linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000),
+      linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+  background-position: 0 0, 25px 25px; /* Offset the second pattern */
+  animation: moveBackground 5s linear infinite; /* Animate background */
+}
+
+
+@keyframes moveBackground {
+  0% {
+      background-position: 0 0, 25px 25px;
+  }
+  100% {
+      background-position: 100px 100px, 125px 125px;
+  }
+}
+
 #landing-drop.hidden {
   animation: 1s hide forwards;
 }
 
 #noise-holder {
+  display: none;
+}
+
+#landing-drop.noise #noise-holder {
+  display: block;
   position: absolute;
   top: -50px;
   left: -50px;

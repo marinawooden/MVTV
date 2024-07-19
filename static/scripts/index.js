@@ -2,6 +2,7 @@
 
 (function() {
   const INFO_TIMEOUT = 5000;
+  const LANDING_STYLES = ["noise", "checker"];
 
   let isPlaying = true;
   let timerId;
@@ -14,6 +15,10 @@
     const videoInfo = document.getElementById('video-info');
     const videoHolder = document.getElementById('player-holder');
     const enterButton = document.getElementById('logo-main');
+    let landingDrop = document.getElementById("landing-drop");
+
+    landingDrop.classList.add(LANDING_STYLES[Math.floor(Math.random() * LANDING_STYLES.length)]);
+
 
     const socket = io();
     socket.on('video_info', startVideo);
