@@ -2,7 +2,7 @@
   <h1>MVTV</h1>
   <img src="./static/img/logo-merged.svg" alt="MVTV Logo" style="max-height: 100px">
   <p align="center" style="max-width: 300px">
-    A retro-style music video streaming platform, highly inspired by MTV circ 1980s-90s.
+    A retro-style music video streaming platform, highly inspired by MTV circa 1980s-90s.
   </p>
 </div>
 
