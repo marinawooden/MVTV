@@ -41,6 +41,8 @@ class Streamer():
             curr_vid = self.q[0]
             print(f"PLAYING VIDEO: {curr_vid['title']}")
 
+            # TODO: there is an issue where the timer goes for curr_vid['duration'],
+            # but the video took time to process, so the time is off.  idk It's way too late to think.
             print(f"SETTING TIMER TO QUEUE VIDEO IN {curr_vid['duration']} seconds")
             duration = int(curr_vid['duration'])
             if duration > 0:
