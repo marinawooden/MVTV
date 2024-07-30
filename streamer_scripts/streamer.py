@@ -16,7 +16,6 @@ class Streamer():
 
       self.q = [] # queue to play from (elem at 0th index is current)
       self.history = [] # history of already played videos
-      self.last_start = time.time() # start time for calculating how far in to go
       
       with open('streamer_scripts/data/clips.json') as opts:
         data = json.load(opts)
@@ -30,36 +29,45 @@ class Streamer():
       self.queue_video(save=False)
       self.queue_video(save=False)
 
+      print(f"STARTING QUEUE {','.join([vid['title'] for vid in self.q])}")
+      self.last_start = time.time()
       self.play()
 
     def play(self):
-      """
-      Called when a new video starts, keeps track of queue state
-      """
-      print("PLAYING VIDEO! QUEUE IS THIS:")
-      print(", ".join([vid["title"] for vid in self.q]))
+        """
+        Called when a new video starts, keeps track of queue state
+        """
+        if len(self.q) > 0:
+            curr_vid = self.q[0]
+            print(f"PLAYING VIDEO: {curr_vid['title']}")
 
-      if len(self.q) > 0:
-        # get playing video
-        curr_vid = self.q[0]
+            print(f"SETTING TIMER TO QUEUE VIDEO IN {curr_vid['duration']} seconds")
+            duration = int(curr_vid['duration'])
+            if duration > 0:
+                timer = threading.Timer(duration, self.__on_timer_end)
+                timer.start()
+                print("Timer started.")
+            else:
+                print("Invalid duration, playing next video immediately.")
+                self.play()
+
+            # self.q.pop(0)
+            # # Queue the next video while the current one is playing
+            # self.queue_video(save=False)
+        else:
+            print("NO VIDEOS IN QUEUE")
+
+    def __on_timer_end(self):
         # pop off current video from the queue
         self.q.pop(0)
-        # add to history
-        # self.history.append(curr_vid)
         # set new start time
-
-        print(f"SETTING TIMER TO QUEUE VIDEO IN {curr_vid['duration']}")
-        # set timer for when current video starts
-        timer = threading.Timer(curr_vid['duration'], self.play)
-        timer.start()
-
         self.last_start = time.time()
 
         # queue another video
         self.queue_video(save=False)
-      else:
-        print("NO VIDEOS IN QUEUE")
-        self.q.append({"id": "1O0yazhqaxs", "video": "https://www.youtube.com/watch?v=1O0yazhqaxs", "title": "3 second video", "artist": "3 second video", "label": "Youtube", "year": 2024, "video_title": "3 Second Video", "duration": 3, "tags": ["3 second video", "three second video"]})
+        
+        # play the next video
+        self.play()
 
     def stream(self):
       isAd = True;
@@ -136,7 +144,10 @@ class Streamer():
     def __download_video(self, url, output_path):
       ydl_opts = {
         'outtmpl': f'{output_path}',  # Save the video with this name
-        'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'  # Get the best quality video and audio
+        'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4',  # Get the best quality video and audio
+        'quiet': True,
+        'no_warnings': True,
+        'verbose': False
       }
 
       with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -158,10 +169,12 @@ class Streamer():
       subprocess.run([
           "ffmpeg",
           "-y",  # Overwrite output file if it exists
+          "-hide_banner",
           "-f", "concat",
           "-safe", "0",
           "-i", "streamer_scripts/data/queue.txt",
           "-c", "copy",
+          "-loglevel", "quiet",
           filename
       ], check=True)
 
@@ -200,6 +213,7 @@ class Streamer():
           # '-r', "29.97",  # Set the desired framerate
           # '-speed', '18',
           '-preset', 'ultrafast',
+          '-loglevel', 'error',
           output_path  # Output file
       ]
 

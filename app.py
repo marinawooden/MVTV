@@ -60,7 +60,6 @@ socketio = SocketIO(app)
 #     }
 # ]
 
-current_video_index = 0
 video_start_time = time.time()
 streamer = Streamer()
 
@@ -70,19 +69,18 @@ def home():
 
 @app.route('/video_feed')
 def video_feed():
-    global video_start_time, current_video_index, streamer
+    global video_start_time, streamer
     return Response(stream_with_context(streamer.generate_video_stream()), mimetype='video/mp4')
 
 @socketio.on('connect')
 def handle_connect():
-    global current_video_index
     emit('video_info', streamer.current_info())
 
 @socketio.on('video_ended')
 def handle_video_ended():
-    global current_video_index, video_start_time
-    # current_video_index = (current_video_index + 1) % len(video_dict)
+    global video_start_time
     video_start_time = time.time()
+
     emit('video_info', streamer.current_info(), broadcast=True)
 
 if __name__ == '__main__':

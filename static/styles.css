@@ -16,6 +16,19 @@ main {
   align-items: center;
 }
 
+#fullscreen {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 30px;
+  filter: drop-shadow(4px 4px 0px black);
+  cursor: pointer;
+}
+
+#fullscreen:hover {
+  transform: scale(1.1);
+}
+
 #player-holder {
   position: relative;
   display: inline-block;

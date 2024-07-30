@@ -14,6 +14,8 @@
     const videoPlayer = document.getElementById('video-player');
     const videoInfo = document.getElementById('video-info');
     const videoHolder = document.getElementById('player-holder');
+    const fullscreenBtn = document.getElementById('fullscreen');
+
     const enterButton = document.getElementById('logo-main');
     let landingDrop = document.getElementById("landing-drop");
 
@@ -22,6 +24,8 @@
 
     const socket = io();
     socket.on('video_info', startVideo);
+
+    fullscreenBtn.addEventListener('click', makeFullscreen);
 
     enterButton.addEventListener('click', (e) => {
       document.getElementById("landing-drop").classList.add('hidden');
@@ -60,6 +64,32 @@
       videoInfo.classList.toggle("paused");
       isPlaying = !isPlaying;
     });
+  }
+
+  function makeFullscreen(e) {
+    e.stopPropagation();
+
+    let elem = document.getElementById('player-holder');
+
+    if (elem.classList.contains('fullscreen')) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) { /* Safari */
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) { /* IE11 */
+        document.msExitFullscreen();
+      }
+    } else {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+      }
+    }
+
+    elem.classList.toggle('fullscreen');
   }
 
   function startVideo(data) {
